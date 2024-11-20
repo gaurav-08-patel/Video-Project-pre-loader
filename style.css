@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.section-center{
+    
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 100vh;
+}
+h1{
+    z-index: 2;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5); /* Semi-transparent text color */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Blur effect */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(3px); /* Backdrop blur effect */
+    padding: 10px; /* Add some padding */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.btn {
+    position: absolute;
+    bottom: 2.3rem;
+    left: 2.3rem;
+    cursor: pointer;
+    height: 32px;
+    width: 98px;
+    display: flex;
+    border: 3px solid #0085ff;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+}
+.btn-slider{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    border-radius: 7px;
+    background-color: #2288ff;
+    top: 0;
+    left: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease;
+}
+.go-left{
+    left: 0;
+}
+.preloader-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background: radial-gradient(circle, #afd5e4, #357cee);
+    z-index: 999;
+    backdrop-filter: blur(10px);
+}
+
+.loader-text{
+    animation: bounce 1.3s linear infinite ;
+    display: inline-block;
+    font-size: 40px;
+    text-shadow: -12px 11px 9px ;
+    
+}
+
+@keyframes bounce {
+    0%,40%,60%{
+        transform: translateY(0px);
+    }
+    80%{
+        transform: translateY(-8px);
+    }
+    90%{
+        transform: translateY(5px);
+    }
+
+
+}
+
+/* .section-center::after{
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+} */
